@@ -1,0 +1,152 @@
+<f:layout name="Default"/>
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+   <f:comment>
+       <f:debug>{_all}</f:debug>
+   </f:comment>
+    <section class="jobs">
+        <nav id="button_filter" class="subfilter">
+            <ul>
+                <li class="filter" data-section="sect-filter" ><a href="#" >Filter
+                    <div class="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a></li>
+                <li data-section="sect-00" class="first active">
+                    <a href="#" >Alle anzeigen</a>
+                </li>
+                <f:for each="{industries}" as="industrie" iteration="i">
+                    <li class="{f:if(condition:'{i.isLast}',then:'last')}" data-section="sect-00{industrie.uid}">
+                        <a href="#" >{industrie.title}</a>
+                    </li>
+                </f:for>
+            </ul>
+        </nav>
+
+
+        <script>
+
+            $(document).ready(function() {
+
+                var $filterNav = $('#button_filter');
+                var $filters = $filterNav.find('li');
+                var $tiles = $('article.tile');
+
+
+
+
+                $filters.click(function(e) {
+                    e.preventDefault();
+                    var $this = $(this);
+                    var sectionId = $this.data('section');
+                    var filterField = $filterNav.find('.filter a');
+
+                    if (sectionId == 'sect-filter') {
+                        $filters.toggleClass('open');
+                    };
+
+
+
+                    if (sectionId != 'sect-filter') {
+
+                        $.each($filters.not(this), function() {
+                            $(this).closest('li').removeClass('active');
+                            $tiles.removeClass('selected');
+                            $('#filter-reset').removeClass('active');
+                        });
+
+                        //var $filtersText = $this.find('a').text();
+                        //$(filterField).text($filtersText);
+
+                        $this.closest('li').addClass('active');
+                        $filters.removeClass('open');
+
+                        $tiles.filter(':not([data-section=' + sectionId+ '])').hide();
+                        $tiles.filter('[data-section=' + sectionId+ ']').show();
+
+                        $tiles.addClass('selected');
+
+                        if (sectionId == 'sect-00') {
+                            $tiles.show();
+                        };
+
+
+
+                    }
+                });
+
+                /*$('#filter-reset').click(function(e) {
+                    e.preventDefault();
+                    $filters.closest('li').removeClass('active');
+                    $tiles.removeClass('selected');
+                    $('#filter-reset').removeClass('active');
+
+                    $('.listwrap').removeClass('toogle-open');
+                    $('.unternehmen h2 .light').text(' ');
+                    $tiles.show();
+                    $('.listwrap .first').addClass('active');
+
+                });*/
+
+                if (typeof QueryString.uid != 'undefined') {
+                    $filterNav.find('li a[data-program="' + QueryString.uid + '"]').click();
+                }
+            });
+
+           /*
+           $(document).ready(function() {
+                tinysort('.unternehmen>article',{data:'program'});
+            });
+            */
+        </script>
+
+        <f:for each="{jobmarkets}" as="jobmarket">
+            <article class="tile" data-section="sect-00{jobmarket.industries.uid}">
+                <div class="article-inner">
+                    <f:link.action action="show" pageUid="14" arguments="{jobmarket : jobmarket}" class="fulllink"/>
+                    <div class="img">
+                        <div class="inner color grayscale" style="background: url('{f:uri.image(src:jobmarket.image.originalResource.publicUrl, treatIdAsReference:1, width:128)}') center center no-repeat"></div>
+                    </div>
+                    <header>
+                        <h4>{jobmarket.title}<br>
+                            <span>
+                                <f:if condition="{jobmarket.subtitle}">
+                                    <f:then>
+                                        {jobmarket.subtitle}
+                                    </f:then>
+                                    <f:else>
+                                        &nbsp;
+                                    </f:else>
+                                </f:if>
+                            </span>
+                        </h4>
+                    </header>
+                    <div class="btn_article">Stelle ansehen</div>
+                    <footer>
+                        <label><span><i class="relationship"></i>{jobmarket.relationships.title}</span></label>
+                        <label><span><i class="contract"></i>{jobmarket.contracts.title}</span></label>
+                        <label><span><i class="location"></i>{jobmarket.locations.title}</span></label>
+                        <label><span><i class="industrie"></i>{jobmarket.industries.title}</span></label>
+                    </footer>
+                    <div class="clearfix"></div>
+
+                </div>
+            </article>
+        </f:for>
+    </section>
+    <div class="clearfix"></div>
+
+</f:section>

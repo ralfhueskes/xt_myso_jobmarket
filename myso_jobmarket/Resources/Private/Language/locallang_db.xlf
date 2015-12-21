@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-12-09T14:28:27Z" product-name="myso_jobmarket">
+		<header/>
+		<body>
+			<trans-unit id="tx_mysojobmarket_domain_model_jobmarket">
+				<source>Jobmarket</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_jobmarket.id">
+				<source>Id</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_jobmarket.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_jobmarket.subtitle">
+				<source>Subtitle</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_jobmarket.company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_jobmarket.task">
+				<source>Task</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_jobmarket.profile">
+				<source>Profile</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_jobmarket.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_jobmarket.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_jobmarket.relationships">
+				<source>Relationships</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_jobmarket.locations">
+				<source>Locations</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_jobmarket.industries">
+				<source>Industries</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_jobmarket.contracts">
+				<source>Contracts</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_relationship">
+				<source>Relationship</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_relationship.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_location.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_location.short_title">
+				<source>Short Title</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_industrie">
+				<source>Industrie</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_industrie.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_contract">
+				<source>Contract</source>
+			</trans-unit>
+			<trans-unit id="tx_mysojobmarket_domain_model_contract.title">
+				<source>Title</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

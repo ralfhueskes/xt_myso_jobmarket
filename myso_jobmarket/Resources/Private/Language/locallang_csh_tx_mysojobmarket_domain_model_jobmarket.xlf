@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-12-09T14:28:27Z" product-name="myso_jobmarket">
+		<header/>
+		<body>
+			<trans-unit id="id.description">
+				<source>id</source>
+			</trans-unit>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="subtitle.description">
+				<source>subtitle</source>
+			</trans-unit>
+			<trans-unit id="company.description">
+				<source>company</source>
+			</trans-unit>
+			<trans-unit id="task.description">
+				<source>task</source>
+			</trans-unit>
+			<trans-unit id="profile.description">
+				<source>profile</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="relationships.description">
+				<source>relationships</source>
+			</trans-unit>
+			<trans-unit id="locations.description">
+				<source>locations</source>
+			</trans-unit>
+			<trans-unit id="industries.description">
+				<source>industries</source>
+			</trans-unit>
+			<trans-unit id="contracts.description">
+				<source>contracts</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

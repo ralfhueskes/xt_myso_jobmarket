@@ -1,0 +1,218 @@
+<section class="jobs detail" xmlns:f="http://www.w3.org/1999/html">
+		<article class="col-12">
+			<div class="article-inner">
+				<div class="img">
+					<div class="inner" style="background: url('{f:uri.image(src:jobmarket.image.originalResource.publicUrl, treatIdAsReference:1, width:170, height:170)}') center center no-repeat"></div>
+				</div>
+				<header>
+					<h2>{jobmarket.title}</h2>
+					<f:if condition="{jobmarket.subtitle}">
+						<h3>
+							{jobmarket.subtitle}
+						</h3>
+					</f:if>
+				</header>
+				<footer>
+					<label><span><i class="relationship"></i>{jobmarket.relationships.title}</span></label>
+					<label><span><i class="contract"></i>{jobmarket.contracts.title}</span></label>
+					<label><span><i class="location"></i>{jobmarket.locations.title}</span></label>
+					<label><span><i class="industrie"></i>{jobmarket.industries.title}</span></label>
+				</footer>
+
+				<div class="main">
+					<header>
+						<div class="company">
+							<h5>Das Unternehmen</h5>
+							<f:format.html>{jobmarket.company}</f:format.html>
+						</div>
+					</header>
+					<main>
+						<div class="profile col-06">
+							<h5>Ihre Aufgabe</h5>
+							<f:format.html>{jobmarket.task}</f:format.html>
+						</div>
+						<div class="profile col-06">
+							<h5>Ihr Profil</h5>
+							<f:format.html>{jobmarket.profile}</f:format.html>
+						</div>
+						<div class="clearfix"></div>
+					</main>
+						<footer>
+							<f:format.html>{jobmarket.description}</f:format.html>
+							<p class="response-text">Wir freuen uns auf Ihre Kontaktaufnahme und stehen auch für telefonische Rückfragen gerne zur Verfügung:<br>
+								Wir freuen uns auf ihren Anruf unter <span>+49 (0) 2841 9984 0</span></p>
+						</footer>
+				</div>
+			</div>
+		</article>
+</section>
+<div class="clearfix"></div>
+</div>
+</section>
+<section id="contact" class="detail">
+	<div class="wrapper">
+		<header>
+
+			<h2>Bewerben sie sich jetzt</h2>
+			<h3>für den Posten <i>{jobmarket.title}</i></h3>
+
+		</header>
+
+		<f:cObject typoscriptObjectPath="lib.applicationForm" />
+
+		<f:comment>
+			<div class="clearfix" style="border-top:5px dotted red"></div>
+
+			<section class="contact col-12">
+				<form>
+					<div class="row">
+						<div class="col col-06">
+							<label for="name">Name/Vorname *</label>
+							<input name="name" placeholder="Bitte Ausfüllen!" id="name" type="text">
+						</div>
+						<div class="col col-06">
+							<label for="firma">Firma</label>
+							<input name="firma" id="firma" type="text">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col-06">
+							<label for="adress">PLZ/Wohnort *</label>
+							<input name="adress" placeholder="Bitte Ausfüllen!" id="adress" type="text">
+						</div>
+						<div class="col col-06">
+							<label for="street">Strasse</label>
+							<input name="street" id="street" type="text">
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="row">
+						<div class="col col-03 error">
+							<label for="email">E-Mail* <span class="is_error"><i></i>Pflichtfeld</span> </label>
+							<input name="email" placeholder="Bitte Ausfüllen!" id="email" type="text">
+						</div>
+						<div class="col col-03">
+							<label for="tel">Rufnummer*</label>
+							<input name="tel" placeholder="Bitte Ausfüllen!" id="tel" type="text">
+						</div>
+						<div class="col col-03">
+							<label for="mobile">Mobil</label>
+							<input name="mobile" id="mobile" type="text">
+						</div>
+						<div class="col col-03">
+							<label for="alter">Geburtsjahr*</label>
+							<input name="alter" placeholder="Bitte Ausfüllen!" id="alter" type="text">
+						</div>
+					</div>
+
+					<div class="clearfix"></div>
+
+					<div class="row skills">
+						<div class="col col-12">
+							<label for="skills_graduation">Ausbildung/Studium/Abschluss</label>
+							<textarea name="skills_graduation" id="skills_graduation"></textarea>
+						</div>
+						<div class="col col-12">
+							<label for="skills_statusquo">Derzeitige Position</label>
+							<textarea name="skills_statusquo" id="skills_statusquo"></textarea>
+						</div>
+						<div class="col col-12">
+							<label for="skills_intended">Angestrebte Position(en)</label>
+							<textarea name="skills_intended" id="skills_intended"></textarea>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="row skills">
+						<div class="col col-03">
+							<label for="skills_language1">Fremdsprache </label>
+							<input name="skills_language1" id="skills_language1" type="text">
+						</div>
+						<div class="col col-03">
+							<label for="skills_lang_level1">Level</label>
+							<input name="skills_lang_level1" id="skills_lang_level1" type="text">
+						</div>
+						<div class="col col-03">
+							<label for="skills_language2">Fremdsprache</label>
+							<input name="skills_language2" id="skills_language2" type="text">
+						</div>
+						<div class="col col-03">
+							<label for="skills_lang_level2">Level</label>
+							<input name="skills_lang_level2" id="skills_lang_level2" type="text">
+						</div>
+						<div class="col col-12">
+							<label for="skills_lang_more">Weitere Fremdsprachen</label>
+							<input name="skills_lang_more" id="skills_lang_more" type="text">
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="row skills">
+						<div class="col col-06">
+							<label for="skills_noticeperiod">Reisebereitschaft</label>
+							<select name="select" class="chosen-select">
+								<option value="value1">Gering</option>
+								<option value="value2" selected>Mittel</option>
+								<option value="value3">Uneingeschränkt</option>
+							</select>
+						</div>
+						<div class="col col-06">
+							<label for="skills_noticeperiod">Umzugsbereitschaft</label>
+							<select name="select" class="chosen-select">
+								<option value="value1">Gering</option>
+								<option value="value2" selected>Mittel</option>
+								<option value="value3">Uneingeschränkt</option>
+							</select>
+						</div>
+						<div class="col col-03">
+							<label for="skills_noticeperiod">Kündigungsfrist</label>
+							<input name="skills_noticeperiod" id="skills_noticeperiod" type="text">
+						</div>
+						<div class="col col-03">
+							<label for="skills_available">Verfügbar ab</label>
+							<input name="skills_available" id="skills_available" type="text">
+						</div>
+						<div class="col col-03">
+							<label for="skills_salary">Ist-Gehalt</label>
+							<input name="skills_salary" id="skills_salary" type="text">
+						</div>
+						<div class="col col-03">
+							<label for="skills_salary_ext">Gehaltsvorstellung</label>
+							<input name="skills_salary_ext" id="skills_salary_ext" type="text">
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="row skills">
+						<div class="col col-12">
+							<label for="file">PDF Anhang <span class="hint">(Max. 5MB)</span></label>
+							<input name="datei" type="file" id="file" accept="application/pdf">
+						</div>
+					</div>
+					<div class="clearfix"></div>
+
+
+					<div class="row skills">
+						<div class="col col-12">
+							<label for="nachricht">Weitere Anmerkungen</label>
+							<textarea name="nachricht" id="nachricht"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col-12">
+							<p class="hint">Mit dem Senden dieses Formulars akzeptieren Sie, dass Ihre persönlichen Daten an die MySolution Personalberatungs GmbH gesendet werden und dass Sie unsere
+								<f:link.page pageUid="16">Datenschutzerklärungen</f:link.page>
+								gelesen haben. Ihre persönlichen Daten werden vertraulich behandelt und nicht an Dritte weitergegeben, mit Ausnahme unseres Internetproviders.
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col-06 offset-06">
+							<input class="submit" type="submit" value="Nachricht senden">
+						</div>
+					</div>
+				</form>
+			</section>
+			<!-- -->
+		</f:comment>
+
+		<div class="clearfix"></div>
+	</div>
+</section>

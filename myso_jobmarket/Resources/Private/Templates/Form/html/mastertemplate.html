@@ -1,0 +1,433 @@
+<!-- ###master_hint### -->
+<div class="col col-12">
+	<p class="hint">Mit dem Senden dieses Formulars akzeptieren Sie, dass Ihre persönlichen Daten an die MySolution Personalberatungs GmbH gesendet werden und dass Sie unsere
+		<a href="datenschutz/">Datenschutzerklärungen</a>
+		gelesen haben. Ihre persönlichen Daten werden vertraulich behandelt und nicht an Dritte weitergegeben, mit Ausnahme unseres Internetproviders.
+	</p>
+</div><!-- ###master_hint### -->
+
+
+<!-- ###master_hidden### -->
+		<input type="hidden" id="###fieldname###" name="###formValuesPrefix###[###fieldname###]" value="###value_###fieldname######"/>
+<!-- ###master_hidden### -->
+
+<!-- ###master_input### -->
+<div class="col col-06 ###is_error_###fieldname######">
+	<label class="###is_error_###fieldname######" for="###fieldname###">###LLL:###fieldname###### ###required_###fieldname######</label>
+	<input class="form-control" placeholder="###LLL:error_###fieldname######" type="text" size="20" id="###fieldname###" name="###formValuesPrefix###[###fieldname###]" value="###value_###fieldname######"/>
+</div>
+<!-- ###master_input### -->
+
+<!-- ###master_textarea### -->
+<div class="col col-12 ###is_error_###fieldname######">
+	<label class="###is_error_###fieldname######" for="###fieldname###">###LLL:###fieldname###### ###required_###fieldname######<span class="is_error"><i></i>###LLL:requiredfield###</span></label>
+		<textarea class="form-control ###is_error_###fieldname######"  cols="30" id="###fieldname###" name="###formValuesPrefix###[###fieldname###]">###value_###fieldname######</textarea>
+
+</div>
+<!-- ###master_textarea### -->
+
+<!-- ###master_input_ajax### -->
+<div class="col col-06 ajax ###is_error_###fieldname######">
+			<label class="col-xs-10 control-label"  placeholder="###LLL:error_###fieldname######" for="###fieldname###">###LLL:###fieldname###### ###required_###fieldname######<span class="is_error"><i></i>###LLL:requiredfield###</span></label>
+			<div>###validate_###fieldname######</div>
+		    <input class="form-control" type="text" id="###fieldname###" name="###formValuesPrefix###[###fieldname###]" value="###value_###fieldname######"/>
+	###is_error###
+</div>
+<!-- ###master_input_ajax### -->
+
+
+<!-- ###master_input-tiny_ajax### -->
+<div class="col col-03 ajax ###is_error_###fieldname######">
+		<label class="###is_error_###fieldname######" placeholder="###LLL:error_###fieldname######" for="###fieldname###">###LLL:###fieldname###### ###required_###fieldname######<span class="is_error"><i></i>###LLL:requiredfield###</span></label>
+		<div>###validate_###fieldname######</div>
+		<input type="text"  id="###fieldname###" name="###formValuesPrefix###[###fieldname###]" value="###value_###fieldname######"/>
+</div>
+<!-- ###master_input-tiny_ajax### -->
+
+
+
+<!-- ###master_input-large_ajax### -->
+<div class="col col-12 ajax ###is_error_###fieldname######">
+	<label class="###is_error_###fieldname######" for="###fieldname###">###LLL:###fieldname###### ###required_###fieldname######</label>
+	<div>###validate_###fieldname######</div>
+	<input type="text"  id="###fieldname###" name="###formValuesPrefix###[###fieldname###]" value="###value_###fieldname######"/>
+</div>
+<!-- ###master_input-large_ajax### -->
+
+
+<!-- ###master_textarea_ajax### -->
+<div class="col col-06 ajax ###is_error_###fieldname######">
+			<label class="" for="###fieldname###">###LLL:###fieldname###### ###required_###fieldname######</label>
+			<div>###validate_###fieldname######</div>
+
+		<textarea id="###fieldname###" name="###formValuesPrefix###[###fieldname###]">###value_###fieldname######</textarea>
+
+</div>
+<!-- ###master_textarea_ajax### -->
+
+<!-- ###master_willingnesstotravel### -->
+<div class="col col-06 ajax ###is_error_willingnesstotravel###">
+	<label for="willingnesstotravel" class="col-sm-3 control-label">###LLL:willingnesstotravel### ###required_willingnesstotravel###</label>
+		<select id="willingnesstotravel" class="chosen-select" name="###formValuesPrefix###[willingnesstotravel]" >
+			<option value="">---</option>
+			<option value="###LLL:willingness_1###" ###selected_willingnesstotravel_###LLL:willingness_1######>###LLL:willingness_1###</option>
+			<option value="###LLL:willingness_2###" ###selected_willingnesstotravel_###LLL:willingness_2######>###LLL:willingness_2###</option>
+			<option value="###LLL:willingness_3###" ###selected_willingnesstotravel_###LLL:willingness_3######>###LLL:willingness_3###</option>
+		</select>
+		###error_willingnesstotravel###
+		###validate_willingnesstotravel###
+</div>
+<!-- ###master_willingnesstotravel### -->
+
+<!-- ###master_willingnesstorelocate### -->
+<div class="col col-06 ajax ###is_error_willingnesstorelocate###">
+	<label for="willingnesstorelocate" class="col-sm-3 control-label">###LLL:willingnesstorelocate### ###required_willingnesstorelocate###</label>
+	<select id="willingnesstorelocate" class="chosen-select" name="###formValuesPrefix###[willingnesstorelocate]" >
+		<option value="">---</option>
+		<option value="###LLL:willingness_1###" ###selected_willingnesstotravel_###LLL:willingness_1######>###LLL:willingness_1###</option>
+		<option value="###LLL:willingness_2###" ###selected_willingnesstotravel_###LLL:willingness_2######>###LLL:willingness_2###</option>
+		<option value="###LLL:willingness_3###" ###selected_willingnesstotravel_###LLL:willingness_3######>###LLL:willingness_3###</option>
+	</select>
+	###error_willingnesstorelocate###
+	###validate_willingnesstorelocate###
+</div>
+<!-- ###master_willingnesstorelocate### -->
+
+<!-- ###master_contact-type### -->
+###error_contact-type###
+
+<div class="form-group">
+	<label class="col-sm-3 control-label" for="contact-type-private" ###is_error_contact-type###>###LLL:contact-type### ###required_contact-type###</label>
+	<div class="col-sm-9">
+		<div class="radio">
+			<label for="contact-type-private">
+				<input type="radio" id="contact-type-private" name="###formValuesPrefix###[contact-type]" value="###LLL:contact-type.private###" ###checked_contact-type_###LLL:contact-type.private###### />
+				###LLL:contact-type.private### </label>
+		</div>
+		<div class="radio">
+			<label for="contact-type-commercial">
+				<input type="radio" id="contact-type-commercial" name="###formValuesPrefix###[contact-type]" value="###LLL:contact-type.commercial###" ###checked_contact-type_###LLL:contact-type.commercial###### />
+				###LLL:contact-type.commercial### </label>
+		</div>
+	</div>
+</div>
+<!-- ###master_contact-type### -->
+
+<!-- ###master_interests### -->
+###error_interests###
+<div class="form-group">
+	<label class="col-sm-3 control-label">###LLL:interests###</label>
+	<div class="col-sm-9">
+		<div class="checkbox">
+			<label for="interests-sports">
+				<input type="checkbox" id="interests-sports" name="###formValuesPrefix###[interests][]" value="sports" ###checked_interests_sports### />
+				###LLL:interests.sports### </label>
+				</div>
+				<div class="checkbox">
+			<label for="interests-music">
+				<input type="checkbox" id="interests-music" name="###formValuesPrefix###[interests][]" value="music" ###checked_interests_music### />
+				###LLL:interests.music### </label>
+				</div>
+				<div class="checkbox">
+			<label for="interests-movies">
+				<input type="checkbox" id="interests-movies" name="###formValuesPrefix###[interests][]" value="movies" ###checked_interests_movies### />
+				###LLL:interests.movies### </label>
+				</div>
+				<div class="checkbox">
+			<label for="interests-eating">
+				<input type="checkbox" id="interests-eating" name="###formValuesPrefix###[interests][]" value="eating" ###checked_interests_eating### />
+				###LLL:interests.eating### </label>
+		</div>
+	</div>
+</div>
+<!-- ###master_interests### -->
+
+<!-- ###master_file### -->
+<div class="form-group files ###is_error_###fieldname######">
+	<label for="###fieldname###" class="col-sm-3 control-label">###LLL:###fieldname###### ###required_###fieldname######</label>
+	<div class="col-sm-9">
+		<input type="file" id="###fieldname###" name="###formValuesPrefix###[###fieldname###]" value="###value_###fieldname######" />
+		<br />
+		<input type="submit" ###submit_reload### class="btn btn-default tiny submit" value="###LLL:submit_reload###" />
+		###error_###fieldname######
+	</div>
+</div>
+<div class="form-group">
+	<div class="col-sm-9 col-sm-offset-3">
+		<br />
+		<span>###LLL:allowedTypes###</span><span>######fieldname###_allowedTypes###</span>
+		<br />
+		<span>###LLL:maxSize###</span><span>######fieldname###_maxSize###</span>
+		<br />
+		<span>###LLL:uploadedFiles_count###</span><span>######fieldname###_fileCount### / ######fieldname###_maxCount###</span>
+		<br />
+	</div>
+</div>
+######fieldname###_uploadedFiles###
+<!-- ###master_file### -->
+
+<!-- ###master_basicfile### -->
+<div class="col col-12 ###is_error_###fieldname######">
+	<label class="###is_error_###fieldname######" for="###fieldname###">###LLL:###fieldname###### <span class="hint">(Max: 5MB)</span>###required_###fieldname######</label>
+	<input class="form-control" type="file" id="###fieldname###" name="###formValuesPrefix###[###fieldname###]" value="###value_###fieldname######"/>
+	###error_###fieldname######
+</div>
+<!-- ###master_basicfile### -->
+
+<!-- ###master_stylefile### -->
+<div class="col col-12 ###is_error_###fieldname######">
+	<label class="###is_error_###fieldname######" for="###fieldname###">###LLL:###fieldname###### <span class="hint">(Max: 5MB)</span>###required_###fieldname######</label>
+
+	<input type="file" name="###formValuesPrefix###[###fieldname###]" id="file-2" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple />
+	<label for="file-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>###LLL:choose###&hellip;</span></label>
+</div>
+<!-- ###master_stylefile### -->
+
+
+<!-- ###master_checkbox### -->
+<div class="form-group">
+	<div class="col-sm-offset-3 col-sm-9">
+		<div class="checkbox">
+			<label for="###fieldname###">
+				<input type="checkbox" id="###fieldname###" name="###formValuesPrefix###[###fieldname###]" value="1" ###checked_###fieldname###_1### />
+				###LLL:###fieldname###### </label>
+			###error_###fieldname######
+		</div>
+	</div>
+</div>
+<!-- ###master_checkbox### -->
+
+<!-- ###master_spamprotection-captcha### -->
+<div class="form-group ###is_error_captchafield###">
+	<label class="col-sm-3 control-label">###LLL:captcha### ###required_captchafield###</label>
+	<div class="col-sm-9">
+		###CAPTCHA###
+		<input class="form-control" type="text" name="###formValuesPrefix###[captchafield]" />
+		###error_captchafield###
+	</div>
+</div>
+<!-- ###master_spamprotection-captcha### -->
+
+<!-- ###master_spamprotection-jm_recaptcha### -->
+<div class="form-group ###is_error_recaptcha_response_field###">
+		<label class="col-sm-3 control-label">###LLL:captcha### *</label>
+	<div class="col-sm-9">
+		###RECAPTCHA###
+		###error_recaptcha_response_field###
+	</div>
+</div>
+<!-- ###master_spamprotection-jm_recaptcha### -->
+
+<!-- ###master_spamprotection-sr_freecap### -->
+<div class="form-group ###is_error_freecapfield###">
+		<label class="col-sm-3 control-label">###SR_FREECAP_NOTICE### ###required_freecapfield###</label>
+	<div class="col-sm-9">
+		###SR_FREECAP_IMAGE###
+		<input class="form-control" type="text" size="15" id="freecapfield" name="###formValuesPrefix###[freecapfield]" title="###SR_FREECAP_NOTICE###" value="" />
+		###error_freecapfield###
+		###SR_FREECAP_CANT_READ###
+	</div>
+</div>
+<!-- ###master_spamprotection-sr_freecap### -->
+
+<!-- ###master_spamprotection-wt_calculating_captcha### -->
+<div class="form-group ###is_error_wt_calculating_captchafield###">
+		<label class="col-sm-3 control-label">###LLL:captcha### ###required_wt_calculating_captchafield###</label>
+	<div class="col-sm-9">
+		###WT_CALCULATING_CAPTCHA###
+		<input class="form-control" type="text" name="###formValuesPrefix###[wt_calculating_captchafield]" />
+		###error_wt_calculating_captchafield###
+	</div>
+</div>
+<!-- ###master_spamprotection-wt_calculating_captcha### -->
+
+<!-- ###master_spamprotection-mathguard### -->
+<div class="form-group ###is_error_mathguard_answer### mathguard">
+		<label class="col-sm-3 control-label">###LLL:captcha### *</label>
+	<div class="col-sm-9">
+		###MATHGUARD###
+		###error_mathguard_answer###
+	</div>
+</div>
+<!-- ###master_spamprotection-mathguard### -->
+
+<!-- ###master_spamprotection-timecheck### -->
+<input type="hidden" name="###formValuesPrefix###[formtime]" value="###TIMESTAMP###" />
+<!-- ###master_spamprotection-timecheck### -->
+
+<!-- ###master_submit### -->
+<div class="col col-06 offset-06">
+	<input class="submit" value="Nachricht senden" type="submit">
+</div>
+<!-- ###master_submit### -->
+
+<!-- ###master_submit-disable### -->
+<div class="form-group">
+	<div class="col-sm-1 pull-right">
+		<input type="submit" ###submit_nextStep### class="btn btn-default ###validation-status###" value="###LLL:submit###" />
+	</div>
+</div>
+<!-- ###master_submit-disable### -->
+
+<!-- ###master_ajax-submit### -->
+<div class="form-group">
+	<div class="col-xs-10">
+		###loading_ajax-submit###
+	</div>
+	<div class="col-xs-2">
+		<input type="submit" ###submit_nextStep### class="btn btn-default" value="###LLL:submit###" />
+	</div>
+</div>
+<!-- ###master_ajax-submit### -->
+
+<!-- ###master_next### -->
+	<div class="col-sm-1 pull-right">
+		<input type="submit" ###submit_nextStep### class="btn btn-default" value="###LLL:next###" />
+	</div>
+<!-- ###master_next### -->
+
+<!-- ###master_prev### -->
+<div class="form-group">
+	<div class="col-sm-1 col-sm-offset-3">
+		<input type="submit" ###submit_prevStep### class="btn btn-default" value="###LLL:prev###" />
+	</div>
+</div>
+<!-- ###master_prev### -->
+
+<!-- ###master_prevnext### -->
+<div class="form-group">
+	<div class="col-sm-1 col-sm-offset-3">
+		<input type="submit" ###submit_prevStep### class="btn btn-default" value="###LLL:prev###" />
+	</div>
+	<div class="col-sm-1 pull-right">
+		<input type="submit" ###submit_nextStep### class="btn btn-default" value="###LLL:next###" />
+	</div>
+</div>
+<!-- ###master_prevnext### -->
+
+<!-- ###master_prevsubmit### -->
+<div class="form-group">
+	<div class="col-sm-1 col-sm-offset-3">
+		<input type="submit" ###submit_prevStep### class="btn btn-default" value="###LLL:prev###" />
+	</div>
+	<div class="col-sm-1 pull-right">
+		<input type="submit" ###submit_nextStep### class="btn btn-default" value="###LLL:submit###" />
+	</div>
+</div>
+<!-- ###master_prevsubmit### -->
+
+<!-- ###master_form-start### -->
+<div class="col-xs-12">
+	<form action="###REL_URL###" method="post" id="###fieldname###" class="form-examples form-horizontal" role="form">
+		###HIDDEN_FIELDS###
+		<!-- ###master_form-start### -->
+
+		<!-- ###master_multipart-form-start### -->
+		<section class="contact col-12">
+			<form action="###REL_URL###" method="post" id="###fieldname###" enctype="multipart/form-data" class="form-examples form-horizontal" role="form">
+				###HIDDEN_FIELDS###
+				<!-- ###master_multipart-form-start### -->
+
+				<!-- ###master_form-end### -->
+			</form>
+		</section>
+		<!-- ###master_form-end### -->
+
+		<!-- ###master_section-start### -->
+		<div class="row">
+			<!-- ###master_section-start### -->
+
+			<!-- ###master_section-end### -->
+		</div>
+		<div class="clearfix"></div>
+		<!-- ###master_section-end### -->
+
+		<!-- ###master_section_skills-start### -->
+		<div class="row skills">
+			<!-- ###master_section_skills-start### -->
+
+			<!-- ###master_section_skills-end### -->
+		</div>
+		<div class="clearfix"></div>
+		<!-- ###master_section_skills-end### -->
+
+
+		<!-- ###master_email-user-start-plain### -->
+
+		###LLL:greetings### ###value_name###
+
+		###LLL:email_user_text###
+
+		<!-- ###master_email-user-start-plain### -->
+
+		<!-- ###master_email-user-end-plain### -->
+
+		###LLL:email_user_footer###
+		<!-- ###master_email-user-end-plain### -->
+
+		<!-- ###master_email-admin-start-plain### -->
+
+		###LLL:email_admin_text###
+
+		<!-- ###master_email-admin-start-plain### -->
+
+		<!-- ###master_email-admin-end-plain### -->
+
+		###LLL:email_admin_footer###
+		<!-- ###master_email-admin-end-plain### -->
+
+		<!-- ###master_email-user-start-html### -->
+		<p>
+			###LLL:greetings### ###value_name###,
+		</p>
+		<br />
+		<p>
+			###LLL:email_user_text###
+		</p>
+		<br />
+		<table>
+			<!-- ###master_email-user-start-html### -->
+
+			<!-- ###master_email-user-end-html### -->
+		</table>
+		<br />
+		<p>
+			###LLL:email_user_footer###
+		</p>
+		<!-- ###master_email-user-end-html### -->
+
+		<!-- ###master_email-admin-start-html### -->
+
+		<p>
+			<strong>###LLL:email_admin_text###</strong>
+		</p>
+		<br />
+		<table>
+			<!-- ###master_email-admin-start-html### -->
+
+			<!-- ###master_email-admin-end-html### -->
+		</table>
+		<br />
+		<p>
+			###LLL:email_admin_footer###
+		</p>
+		<!-- ###master_email-admin-end-html### -->
+
+		<!-- ###master_email-line-plain### -->
+		###LLL:###fieldname###### ###value_###fieldname######
+		<!-- ###master_email-line-plain### -->
+
+		<!-- ###master_email-line-html### -->
+		<tr>
+			<td valign="top"><strong>###LLL:###fieldname######</strong></td>
+			<td>###value_###fieldname######</td>
+		</tr>
+		<!-- ###master_email-line-html### -->
+
+
+<!-- ###TEMPLATE_SUBMITTEDOK### begin -->
+
+<h3>Vielen Dank!</h3>
+<p>Wir haben Ihre Anfrage erhalten und werden uns zeitnah bei Ihnen melden.<br><br>Ihr Rehcura-Team</p>
+
+<!-- ###TEMPLATE_SUBMITTEDOK### end -->

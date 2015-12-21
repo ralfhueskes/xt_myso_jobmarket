@@ -1,0 +1,30 @@
+plugin.tx_mysojobmarket {
+	view {
+		# cat=plugin.tx_mysojobmarket/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:myso_jobmarket/Resources/Private/Templates/
+		# cat=plugin.tx_mysojobmarket/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:myso_jobmarket/Resources/Private/Partials/
+		# cat=plugin.tx_mysojobmarket/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:myso_jobmarket/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_mysojobmarket//a; type=string; label=Default storage PID
+		storagePid =
+	}
+	settings {
+		applicationForm{
+			#rootPath = EXT:myso_jobmarket/Resources/Private/Templates/Form
+			rootPath = typo3conf/ext/myso_jobmarket/Resources/Private/Templates/Form
+			email {
+				admin {
+					sender_email = r.hueskes@werteins.com
+					to_email = r.hueskes@werteins.com
+
+				}
+			}
+			redirectPage = 17
+			includeBootstrapCSS = 0
+		}
+	}
+}
+

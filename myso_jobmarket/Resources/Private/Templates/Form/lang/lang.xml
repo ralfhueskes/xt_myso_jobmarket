@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Language labels for AJAX Validation Form</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="label_fieldset">AJAX Validation Form</label>
+			<label index="name">Name</label>
+			<label index="prename">Vorname</label>
+
+			<label index="email">E-Mail</label>
+
+			<label index="company">Firma</label>
+			<label index="zip">PLZ/Wohnort</label>
+			<label index="street">Strasse</label>
+			<label index="fon">Rufnummer</label>
+			<label index="mobile">Mobil</label>
+			<label index="birthday">Geburtsjahr</label>
+			<label index="requiredfield">Pflichtfeld</label>
+			<label index="error">Pflichtfeld</label>
+
+
+			<label index="education">Ausbildung/Studium/Abschluss</label>
+			<label index="statusquo">Derzeitige Position</label>
+			<label index="intended">Angestrebte Position(en)</label>
+
+			<label index="language1">Fremdsprache</label>
+			<label index="language2">Fremdsprache</label>
+			<label index="level1">Level</label>
+			<label index="level2">Level</label>
+			<label index="langmore">Weitere Fremdsprachen</label>
+
+			<label index="willingnesstotravel">Reisebereitschaft</label>
+			<label index="willingnesstorelocate">Umzugsbereitschaft</label>
+			<label index="noticeperiod">Kündigungsfrist</label>
+			<label index="available">Verfügbar ab</label>
+
+			<label index="salary">Ist-Gehalt</label>
+			<label index="salary_ext">Gehaltsvorstellung</label>
+			<label index="file">PDF Anhang</label>
+			<label index="choose">Durchsuchen</label>
+
+			<label index="willingnesstotravel">Reisebereitschaft</label>
+			<label index="willingnesstorelocate">Umzugsbereitschaft</label>
+
+			<label index="willingness_1">Gering</label>
+			<label index="willingness_2">Mittel</label>
+			<label index="willingness_3">Uneingeschränkt</label>
+
+			<label index="message">Weitere Anmerkungen</label>
+			<label index="captcha">Captcha - SPAM Protection</label>
+			<label index="submit">ABSENDEN</label>
+			<label index="greetings">Sehr geehrte/r</label>
+			<label index="email_user_subject">Ihre Anfrage</label>
+			<label index="email_user_text">Wir haben Ihre Anfrage erhalten und werden uns zeitnah bei Ihnen melden.</label>
+			<label index="email_user_footer">---------- Diese Nachricht wurde automatisch generiert. ----------</label>
+
+			<label index="email_admin_subject">Bewerbung über my-solution.com</label>
+			<label index="email_admin_text">Folgende Bewerbung wurde über die Seite my-solution.com verschickt</label>
+			<label index="email_admin_footer">---------- Diese Nachricht wurde automatisch generiert. ----------</label>
+
+
+			<label index="error_name_required">Bitte geben Sie Ihren Namen ein!</label>
+			<label index="error_email_required">Bitte geben Sie Ihre E-Mail Adresse ein!</label>
+			<label index="error_email_email">Bitte geben Sie eine korrektre E-Mail Adresse ein!</label>
+			<label index="error_message_required">Bitte geben Sie eine Nachricht ein!</label>
+
+			<label index="error_birthday_required">Bitte Ausfüllen!</label>
+			<label index="error_zip_required">Bitte Ausfüllen!</label>
+			<label index="error_fon_required">Bitte Ausfüllen!</label>
+
+
+		</languageKey>
+	</data>
+</T3locallang>

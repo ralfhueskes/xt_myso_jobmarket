@@ -1,0 +1,153 @@
+plugin.Tx_Formhandler.settings.predef.application-form {
+	debug = 0
+	name = Application Form
+	formID = application
+	formValuesPrefix = application
+	cssFile >
+	langFile.1 = TEXT
+	langFile.1.value = {$plugin.tx_mysojobmarket.settings.applicationForm.rootPath}/lang/lang.xml
+	templateFile = TEXT
+	templateFile.value = {$plugin.tx_mysojobmarket.settings.applicationForm.rootPath}/html/step-1.html
+	masterTemplateFile = TEXT
+	masterTemplateFile.value = {$plugin.tx_mysojobmarket.settings.applicationForm.rootPath}/html/mastertemplate.html
+	isErrorMarker {
+		default = error
+	}
+	singleErrorTemplate {
+		totalWrap = <span class="is_error"><i></i>Pflichtfeld</span>
+	}
+
+	ajax {
+		class = AjaxHandler_JQuery
+		config {
+			ajaxSubmit = 1
+		}
+	}
+
+	files {
+		uploadFolder = uploads/formhandler/
+		enableFileRemoval = 1
+		customRemovalText = TEXT
+		customRemovalText {
+			value = {$plugin.tx_mysojobmarket.settings.applicationForm.rootPath}/skin/images/delete.png
+			wrap = <img src="|" />
+		}
+	}
+	validators {
+		1.class = Validator_Default
+		1.config.fieldConf {
+			name.errorCheck.1 = required
+			birthday.errorCheck.1 = required
+			zip.errorCheck.1 = required
+			fon.errorCheck.1 = required
+
+			email.errorCheck.1 = required
+			email.errorCheck.2 = email
+
+			file.errorCheck {
+
+				# Allow only the configured file extensions
+				1 = fileAllowedTypes
+				1.allowedTypes = pdf
+
+				# Max size of a file 5MB
+				2 = fileMaxSize
+				2.maxSize = 5242880
+
+				3 = fileMaxCount
+				3.maxCount = 1
+			}
+		}
+
+
+	}
+	preProcessors {
+		1.class = PreProcessor_LoadDefaultValues
+		1.config {
+			1 {
+				market-id.defaultValue = TEXT
+				market-id.defaultValue.dataWrap = DB:tx_mysojobmarket_domain_model_jobmarket:{GP:tx_mysojobmarket_mysojobmarket|jobmarket}:id
+				market-id.defaultValue.wrap3 = {|}
+				market-id.defaultValue.insertData = 1
+				market-title.defaultValue = TEXT
+				market-title.defaultValue.dataWrap = DB:tx_mysojobmarket_domain_model_jobmarket:{GP:tx_mysojobmarket_mysojobmarket|jobmarket}:title
+				market-title.defaultValue.wrap3 = {|}
+				market-title.defaultValue.insertData = 1
+				market-subtitle.defaultValue = TEXT
+				market-subtitle.defaultValue.dataWrap = DB:tx_mysojobmarket_domain_model_jobmarket:{GP:tx_mysojobmarket_mysojobmarket|jobmarket}:subtitle
+				market-subtitle.defaultValue.wrap3 = {|}
+				market-subtitle.defaultValue.insertData = 1
+			}
+		}
+	}
+	finishers {
+		1.class = Finisher_Mail
+		1.config {
+			checkBinaryCrLf = message
+			admin {
+				templateFile = TEXT
+				templateFile.value = {$plugin.tx_mysojobmarket.settings.applicationForm.rootPath}/html/email-admin.html
+				sender_email = {$plugin.tx_mysojobmarket.settings.applicationForm.email.admin.sender_email}
+				to_email = {$plugin.tx_mysojobmarket.settings.applicationForm.email.admin.to_email}
+				subject = TEXT
+				subject.data = LLL:{$plugin.tx_mysojobmarket.settings.applicationForm.rootPath}/lang/lang.xml:email_admin_subject
+
+				# Attach the uploaded files to the email sent out
+				attachment = file
+			}
+		}
+
+		#2.class = Tx_Formhandler_Finisher_SubmittedOK
+		#2.config.returns = 1
+
+		5.class = Finisher_Redirect
+		5.config {
+			redirectPage = {$plugin.tx_mysojobmarket.settings.applicationForm.redirectPage}
+		}
+	}
+}
+
+
+plugin.tx_mysojobmarket {
+	view {
+		templateRootPath = {$plugin.tx_mysojobmarket.view.templateRootPath}
+		partialRootPath = {$plugin.tx_mysojobmarket.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_mysojobmarket.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_mysojobmarket.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+	settings {
+	}
+}
+
+
+lib.displayLatest = USER
+lib.displayLatest {
+	userFunc = tx_extbase_core_bootstrap->run
+	pluginName = Mysojobmarket
+	vendorName = MysoJobMarket
+	extensionName = MysoJobmarket
+	controller = Jobmarket
+	action = latest
+	switchableControllerActions {
+		Jobmarket {
+			1 = latest
+		}
+	}
+	view =< plugin.tx_mysojobmarket.view
+	persistence =< plugin.tx_mysojobmarket.persistence
+	persistence.storagePid = 4
+	settings =< plugin.tx_mysojobmarket.settings
+	settings.detailPid = 14
+}
+
+
+lib.applicationForm < plugin.tx_formhandler_pi1
+lib.applicationForm {
+	settings < plugin.Tx_Formhandler.settings.predef.application-form
+}

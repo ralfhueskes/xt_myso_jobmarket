@@ -1,0 +1,87 @@
+<?php
+namespace MysoJobMarket\MysoJobmarket\Controller;
+
+
+/***************************************************************
+ *
+ *  Copyright notice
+ *
+ *  (c) 2015 Ralf Hüskes <r.hueskes@werteins.com>, Wert Eins
+ *
+ *  All rights reserved
+ *
+ *  This script is part of the TYPO3 project. The TYPO3 project is
+ *  free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  The GNU General Public License can be found at
+ *  http://www.gnu.org/copyleft/gpl.html.
+ *
+ *  This script is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
+
+/**
+ * JobmarketController
+ */
+class JobmarketController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+
+	/**
+	 * jobmarketRepository
+	 *
+	 * @var \MysoJobMarket\MysoJobmarket\Domain\Repository\JobmarketRepository
+	 * @inject
+	 */
+	protected $jobmarketRepository = NULL;
+
+	/**
+	 * industrieRepository
+	 *
+	 * @var \MysoJobMarket\MysoJobmarket\Domain\Repository\IndustrieRepository
+	 * @inject
+	 */
+	protected $industrieRepository = NULL;
+
+	/**
+	 * action list
+	 *
+	 * @return void
+	 */
+	public function listAction() {
+		$jobmarkets = $this->jobmarketRepository->findAll();
+		$industrieRepository = $this->industrieRepository->findAll();
+		$this->view->assign('jobmarkets', $jobmarkets);
+		$this->view->assign('industries', $industrieRepository);
+	}
+
+	/**
+	 * action latest
+	 *
+	 * @return void
+	 */
+	public function latestAction() {
+		$jobmarkets = $this->jobmarketRepository->findLatest();
+		$this->view->assign('jobmarkets', $jobmarkets);
+	}
+
+
+
+	/**
+	 * action show
+	 *
+	 * @param \MysoJobMarket\MysoJobmarket\Domain\Model\Jobmarket $jobmarket
+	 * @return void
+	 */
+	public function showAction(\MysoJobMarket\MysoJobmarket\Domain\Model\Jobmarket $jobmarket) {
+		$this->view->assign('jobmarket', $jobmarket);
+	}
+
+
+
+}
